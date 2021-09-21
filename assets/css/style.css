@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0.9375rem;
+}
+
+h1{
+    font-size: 1.5rem;
+    color: #FFF;
+    text-align: left;
+    margin: 0.9375rem 0 1.25rem 0.9375rem;
+    font-weight: 500;
+}
+
+form input{
+    margin: 0 1.25rem;
+    width: calc(100% - 2.5rem);
+    padding: 0.625rem 0.9375rem;
+    border: 0;
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    color: #6D4BFC;
+}
+
+form .btn-login{
+    margin: 0 1.25rem;
+    width: calc(100% - 2.5rem);
+    background-color: #3CEB88;
+    color: #FFF;
+    padding: 0.625rem 0.9375rem;
+    border: 0;
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.box-login{
+    width: 31.25rem;
+    height: 31.25rem;
+    background-color: #6D4BFC;
+    border: 0;
+    border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
+}
+
+.box-login .capa{
+    height: 12.5rem;
+    background: url(../img/capa-desktop.jpg);
+    border-radius: 0.625rem 0.625rem 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.msg-error{
+    color: #FF6D6D;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.msg-error i{
+    font-size: 1rem;
+    color: #FF6D6D;
+    padding-right: 0.3125rem;
+}
+
+@media (min-width:480px){
+
+    /* .box-login .capa{
+        background: url(../img/capa-desktop.jpg);
+        
+    } */
+}
