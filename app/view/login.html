@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-
 </head>
 
 <body>
     <div class="box-login">
         <div class="capa"></div>
         <h1>Faça seu login</h1>
-        <form action="">
-            <input type="email" name="e-mail" placeholder="Email">
+        <form method="POST" action="http://localhost/sistemaLoginPhp/login/check">
+            <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Senha">
             <button class="btn-login">Logar</button>
             <span class="msg-error"><i class="fa fa-exclamation-triangle"></i><p>Tentativa Inválida</p></span>
