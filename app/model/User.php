@@ -1,5 +1,7 @@
 <?php
 
+use Database\Connection;
+
 class user
 {
     private $id, $name, $email, $password;
@@ -7,16 +9,27 @@ class user
     public function validateLogin()
     {
         // Connection DB
-
+        $conn = Connection::getConn();
         // Validate Email
+        $sql = 'SELECT * FROM users WHERE email = :email';
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':email', $this->email);
+        $stmt->execute();
 
-        // Validade Password
+        if($stmt->rowCount()){
+            $result = $stmt->fetch();
+            // Validate Password
+            if($result['password'] === $this->password){
+                // Session and dashboard direction
+                $_SESSION['usr'] = $result['id'];
 
-        // Session and dashboard direction
+                return true;
+            }
+        }
 
         // Redirect login if error
+        throw new \Exception('Login Inválido!');        
     }
-
 
     // Sets
     public function setName($name)

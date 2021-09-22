@@ -27,6 +27,7 @@ class LoginController
             $user->setEmail($_POST['email']);
             $user->setPassword($_POST['password']);
             $user->validateLogin();
+            header('Location: http://localhost/sistemaLoginPhp/dashboard');
         } catch (\Exception $e) {
             header('Location: http://localhost/sistemaLoginPhp/');
         }
