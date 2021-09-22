@@ -32,8 +32,6 @@ class LoginController
             header('Location: http://localhost/sistemaLoginPhp/');
         }
 
-        
     }
-
 
 }
