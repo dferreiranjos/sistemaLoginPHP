@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/sistemaLoginPhp/assets/css/style.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
@@ -19,7 +19,9 @@
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Senha">
             <button class="btn-login">Logar</button>
-            <span class="msg-error"><i class="fa fa-exclamation-triangle"></i><p>Tentativa Inválida</p></span>
+            {% if error != '' %}
+                <span class="msg-error"><i class="fa fa-exclamation-triangle"></i><p>Tentativa Inválida</p></span>
+            {% endif %}
         </form>
     </div>
 </body>

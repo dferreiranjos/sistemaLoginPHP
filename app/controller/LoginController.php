@@ -15,8 +15,9 @@ class LoginController
             'auto_reload'=>true,
         ]);
         $template = $twig->load('login.html');
+        $parameters['error'] = $_SESSION['msg_error'] ?? null;
 
-        return $template->render();
+        return $template->render($parameters);
     }
 
     public function check()
@@ -29,6 +30,7 @@ class LoginController
             $user->validateLogin();
             header('Location: http://localhost/sistemaLoginPhp/dashboard');
         } catch (\Exception $e) {
+            $_SESSION['msg_error'] = array('msg'=> $e->getMessage(), 'count'=>0);
             header('Location: http://localhost/sistemaLoginPhp/');
         }
 
